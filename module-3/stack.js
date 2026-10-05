@@ -6,11 +6,13 @@ class Stack {
     }
 
     // push fn for pushing the value at last
+    // O(1)
     push(value) {
         this.items.push(value)
     }
 
     // pop fn for pop out the last value
+    // O(1)
     pop() {
         // if array is empty return undefined
         if (this.isEmpty()) {
@@ -21,6 +23,7 @@ class Stack {
     }
 
     // peek the last value of the array
+    // O(1)
     peek() {
         // if array is empty return undefined
         if (this.isEmpty()) {
@@ -31,12 +34,14 @@ class Stack {
     }
 
     // check wether an array is empty
+    // O(1)
     isEmpty() {
         return this.items.length === 0
     }
 
+    // O(n)
     print() {
-        console.log(this.items)
+        console.log(this.items.slice().reverse().join(" -> "))
     }
 }
 
